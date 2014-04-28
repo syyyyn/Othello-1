@@ -17,6 +17,6 @@ public class Player {
 
         this.board.placeChip( this.color, row, col );
 
-        // da la vuelta a las otras fichas
+        // twirl the chips to the other color
     }
 }
