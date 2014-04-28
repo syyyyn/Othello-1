@@ -23,7 +23,7 @@ public class Turn {
 
     /**
      *
-     * @return devuelve el valor del turno
+     * @return return the value of the turn ...
      */
     public int getTurn() {
         return this.value;
