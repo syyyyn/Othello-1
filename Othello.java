@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Created by lfmingo on 01/04/14.
+ * Created by pmunoz on 01/04/14.
  */
 public class Othello {
 
@@ -22,16 +22,16 @@ public class Othello {
 
         while(true) {
 
-            // dime la fila dime la col (row, col)
+            // put the row and the col (row, col)
             int row = this.readRow();
-           /// vacia
-           /// puedo poner
+           /// empty
+           /// I can put
             this.players[ turn.getTurn() ].placeChip( row, row);
             turn.change();
 
 
-            // pon ficha
-            // cambiar turno
+            // put chip
+            // change turn
             board.display();
 
 
@@ -40,7 +40,7 @@ public class Othello {
     }
 
     private int readRow() {
-        System.out.print("Dime una fila?");
+        System.out.print("set a row");
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Integer value = -1;
@@ -54,9 +54,9 @@ public class Othello {
 
     private int initPlayers() {
         Turn aux = new Turn();
-        this.players[0] = new Player("nombre 1", aux.getTurn(), this.board);
+        this.players[0] = new Player("name 1", aux.getTurn(), this.board);
         aux.change();
-        this.players[1] = new Player("nombre 2", aux.getTurn(), this.board);
+        this.players[1] = new Player("name 2", aux.getTurn(), this.board);
 
         if (aux.getTurn() == 0) return 1;
         else return 0;
