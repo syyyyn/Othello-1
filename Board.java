@@ -1,5 +1,5 @@
 /**
- * Created by lfmingo on 01/04/14.
+ * Created by pmunoz on 01/04/14.
  */
 public class Board {
 
