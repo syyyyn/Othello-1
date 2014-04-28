@@ -1,5 +1,5 @@
 /**
- * Created by lfmingo on 01/04/14.
+ * Created by pmunoz on 01/04/14.
  */
 public class Cell {
     private static final char BLACK = 'X';
@@ -17,9 +17,9 @@ public class Cell {
         return this.empty;
     }
 
-    public void placeChip( int jugador ) {
+    public void placeChip( int player ) {
         this.empty = false;
-        this.value = jugador;
+        this.value = player;
     }
 
     public void display() {
