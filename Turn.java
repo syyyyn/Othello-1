@@ -13,7 +13,8 @@ public class Turn {
    }
 
     /**
-     *
+     *according to the rules, black start to play, but we can change it if we want
+     * This class is finished, only is necessary to decide who started first, black, white or random
       * @param v This parameter adjust the value ...
      */
    public Turn(int v) {
