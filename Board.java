@@ -1,5 +1,5 @@
 /**
- * Created by pmunoz on 01/04/14.
+ * Created by pmunoz and smartinez on 01/04/14.
  */
 public class Board {
 
@@ -46,4 +46,27 @@ public class Board {
     public void placeChip(int color, int row, int col) {
         this.cells[row][col].placeChip(color);
     }
+    
+    public boolean findLegalMove(...){
+        /**
+         * Here program must check if the chip could be place in a position set as parameter
+         * It could return the coordinates of every available position
+        */
+    }
+    public void replaceChip(...){
+        /**
+         * Here program will replace chips while are between the color chips
+        */
+    }
+    public int getChipsCount(int color){
+        /**
+         * program will walk the array and return the number of chips that the player ser as parameter has
+         * 
+         * Maybe we could set another method to count the total
+        */
+    }
+    public boolean gameOver(...){
+        /**
+         * If the board is complete or if a chip cant be set, this method return true.
+        */
 }
