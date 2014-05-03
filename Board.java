@@ -60,7 +60,7 @@ public class Board {
     }
     public int getChipsCount(int color){
         /**
-         * program will walk the array and return the number of chips that the player ser as parameter has
+         * program will iterate over the array and return the number of chips that the player ser as parameter has
          * 
          * Maybe we could set another method to count the total
         */
