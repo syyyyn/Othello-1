@@ -20,14 +20,21 @@ public class Othello {
 
         board.display();
 
-        while(true) {
+       // while(true) {
 
             // put the row and the col (row, col)
+
+            System.out.println("JUEGA " + players[turn.getTurn()].getChip());
             int row = this.readRow();
+            int col = this.readCol();
            /// empty
            /// I can put
-            this.players[ turn.getTurn() ].placeChip( row, row);
-            turn.change();
+
+
+            int puedo =  board.move(new Move(row,col), players[turn.getTurn()].getChip());
+            System.out.println("-----"+ puedo + "........");
+            //this.players[ turn.getTurn() ].placeChip( row, row);
+            //turn.change();
 
 
             // put chip
@@ -36,11 +43,24 @@ public class Othello {
 
 
 
-        }
+        //}
     }
 
     private int readRow() {
         System.out.print("set a row");
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Integer value = -1;
+        try {
+            value = Integer.parseInt(br.readLine());
+        } catch (IOException e) {
+
+        }
+        return value;
+    }
+
+    private int readCol() {
+        System.out.print("set a col");
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Integer value = -1;
@@ -58,8 +78,8 @@ public class Othello {
         aux.change();
         this.players[1] = new Player("name 2", aux.getTurn(), this.board);
 
-        if (aux.getTurn() == 0) return 1;
-        else return 0;
+        if (aux.getTurn() == 0) return 0;
+        else return 1;
     }
 
     public static void main(String[] args) {
