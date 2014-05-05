@@ -30,6 +30,10 @@ public class Turn {
         return this.value;
     }
 
+    /*
+     * changes player
+     * 
+     */
     public void change() {
         this.value = (this.value + 1) % 2;
     }
