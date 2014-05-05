@@ -1,5 +1,6 @@
 /**
  * Created by pmunoz on 01/04/14.
+ * Updated by aeap and jgeorge on 05/05/14.
  */
 public class Cell {
     public static final char BLACK = 'X'; //
