@@ -5,8 +5,7 @@
 public class Cell {
     public static final char BLACK = 'X'; //
     public static final char WHITE = 'O'; // 
-    public static final char EMPTY = ' '; //
-    
+
     public boolean empty; //
     public boolean white;
     public boolean black;
