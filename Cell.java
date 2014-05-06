@@ -5,11 +5,13 @@
 public class Cell {
     public static final char BLACK = 'X'; //
     public static final char WHITE = 'O'; //
-    public static final char EMPTY = ' ';
+    public static final char EMPTY = ' '; //
+    public static final char CANSELECT = '?';//
     
     public boolean empty; //
     public boolean white;
     public boolean black;
+    public boolean canSelect;
     
     public cellState value;
 
