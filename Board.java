@@ -5,7 +5,7 @@
 
 
 
-enum cellState {white, black, empty};
+enum cellState {white, black, empty, canSelect};
 
 public class Board {
 
