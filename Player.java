@@ -16,7 +16,11 @@ public class Player {
     public void placeChip(int row, int col) {
 
         this.board.placeChip( this.color, row, col );
-
-        // twirl the chips to the other color
     }
+    public void findCanSelect(int color){
+    	/**you have to create a method that find in what squares you can place a chip, and in that squares we can write a '?', 
+    	you can take information of the class board*/
+    	
+    }
+
 }
