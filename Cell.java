@@ -5,12 +5,15 @@
 public class Cell {
     public static final char BLACK = 'X'; //
     public static final char WHITE = 'O'; // 
+    
+    public static final char CANSELECT = '?';
 
     public boolean empty; //
     public boolean white;
     public boolean black;
+    public boolean canselect;
     
-    public int value;
+    public int value; // 0 - white, 1 - black
 
     public Cell() {
         this.empty = true;
@@ -35,14 +38,26 @@ public class Cell {
         }
     }
 
+    public void changeChip() {
+        placeChip((value+1)%2);
+    }
+
     public boolean isWhite(){
-    	return this.white = true;
+    	return this.white;
     }
     
     public boolean isBlack(){
-    	return this.black = true;
+    	return this.black;
     }
     
+    public boolean canSelect() {
+        return this.canselect;
+    }
+    
+    public void setSelect() {
+        this.canselect = true;
+    }
+
     public void display() {
        if (this.isEmpty())
        {
@@ -52,6 +67,8 @@ public class Cell {
            char content = BLACK;
            if (this.value == 0)
                content = WHITE;
+           if (canselect)
+               content = CANSELECT;
            System.out.print("[ " + content + " ]");
        }
     }
