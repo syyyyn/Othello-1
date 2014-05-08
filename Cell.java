@@ -1,3 +1,4 @@
+package othello.Othello;
 /**
  * Created by pmunoz on 01/04/14.
  * Updated by aeap and jgeorge on 05/05/14.
@@ -53,7 +54,12 @@ public class Cell {
     public boolean canSelect() {
         return this.canselect;
     }
-    
+
+
+    public int getPlayer() {
+        return this.value;
+    }
+
     public void setSelect() {
         this.canselect = true;
     }
