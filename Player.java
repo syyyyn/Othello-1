@@ -1,6 +1,6 @@
-/**
- * Created by lfmingo on 01/04/14.
- */
+package othello.Othello;
+import java.util.ArrayList;
+
 public class Player {
     private String name;
     private int color;
@@ -17,10 +17,15 @@ public class Player {
 
         this.board.placeChip( this.color, row, col );
     }
-    public void findCanSelect(int color){
-    	/**you have to create a method that find in what squares you can place a chip, and in that squares we can write a '?', 
-    	you can take information of the class board*/
-    	
+    public void findCanSelect(){
+
+        ArrayList<Move> moves = board.validMove(this.color);
+
+        //for( int i=0; i<moves.size(); i++)
+        //    board.setCanSelect(moves.get(i));
+
+        for (Move move : moves)
+            board.setCanSelect(move);
     }
 
 }
