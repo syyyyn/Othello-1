@@ -2,6 +2,7 @@ package othello.Othello;
 /**
  * Created by pmunoz on 01/04/14.
  * Updated by aeap and jgeorge on 05/05/14.
+ * Updated by zwodnik on 09/05/14.
  */
 public class Cell {
     public static final char BLACK = 'X'; //
@@ -14,10 +15,11 @@ public class Cell {
     public boolean black;
     public boolean canselect;
     
-    public int value; // 0 - white, 1 - black
+    public int value; // 0 - white, 1 - black, -1 - empty
 
     public Cell() {
         this.empty = true;
+        this.value = -1;
     }
 
     public boolean isEmpty() {
@@ -55,6 +57,9 @@ public class Cell {
         return this.canselect;
     }
 
+    public void unselect() {
+        this.canselect = false;
+    }
 
     public int getPlayer() {
         return this.value;
@@ -65,17 +70,18 @@ public class Cell {
     }
 
     public void display() {
-       if (this.isEmpty())
-       {
-            System.out.print("[ " + " " + " ]");
-       }
-       else {
-           char content = BLACK;
-           if (this.value == 0)
-               content = WHITE;
-           if (canselect)
-               content = CANSELECT;
-           System.out.print("[ " + content + " ]");
-       }
+        if (this.isEmpty())
+        {
+            if(this.canselect)
+                System.out.print("[ " + CANSELECT + " ]");
+            else
+                System.out.print("[ " + " " + " ]");
+        }
+        else {
+            char content = BLACK;
+            if (this.value == 0)
+                content = WHITE;
+            System.out.print("[ " + content + " ]");
+        }
     }
 }
