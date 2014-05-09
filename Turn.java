@@ -1,3 +1,4 @@
+package othello.Othello;
 /**
  * Created by lfmingo on 01/04/14.
  *
