@@ -1,4 +1,8 @@
-
+   
+   import java.util.ArrayList;
+   
+    public class Player{
+    
     private String name;
     private int color;
     private Board board;
@@ -33,5 +37,6 @@
 
         for (Move move : moves)
             board.setCanSelect(move);
+    }
     }
 
