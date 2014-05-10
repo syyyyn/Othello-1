@@ -37,7 +37,10 @@ public class Othello {
                 this.players[ turn.getTurn() ].placeChip( row, col);
                 turn.change();
             }
-            
+            //tHATS NEW
+            if(turn.getTurn()==0)
+            	System.out.println("White player moves(Chip O)");
+            else System.out.println("Black player moves(Chip X)");
             // put chip
             // change turn
             this.players[ turn.getTurn() ].findCanSelect();
